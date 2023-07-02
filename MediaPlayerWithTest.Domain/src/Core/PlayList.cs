@@ -1,4 +1,4 @@
-namespace MediaPlayerWithTest.Domain.src.Core
+namespace MediaPlayer.src.Domain.Core
 {
     public class PlayList
     {

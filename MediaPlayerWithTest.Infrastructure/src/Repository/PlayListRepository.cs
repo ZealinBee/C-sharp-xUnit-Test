@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediaPlayer.src.Domain.RepositoryInterface;
 
-namespace MediaPlayerWithTest.Infrastructure.src.Repository
+namespace MediaPlayer.src.Infrastructure.Repository
 {
     public class PlayListRepository : IPlayListRepository
     {

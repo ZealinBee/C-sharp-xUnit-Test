@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MediaPlayer.src.Domain.Core;
 
-namespace MediaPlayerWithTest.Domain.src.RepositoryInterface
+namespace MediaPlayer.src.Domain.RepositoryInterface
 {
     public interface IPlayListRepository
     {

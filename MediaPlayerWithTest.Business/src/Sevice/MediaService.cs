@@ -1,3 +1,6 @@
+using MediaPlayer.src.Business.ServiceInterface;
+using MediaPlayer.src.Domain.Core;
+using MediaPlayer.src.Domain.RepositoryInterface;
 
 namespace MediaPlayer.src.Business.Sevice
 {
@@ -7,7 +10,7 @@ namespace MediaPlayer.src.Business.Sevice
 
         public MediaService(IMediaRepository mediaRepository)
         {
-            _mediaRepository = mediaRepository;
+            _mediaRepository = mediaRepository; 
         }
 
         public void CreateNewFile(string fileName, string filePath, TimeSpan duration)

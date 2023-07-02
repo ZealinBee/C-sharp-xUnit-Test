@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MediaPlayerWithTest.Business.src.ServiceInterface
+namespace MediaPlayer.src.Business.ServiceInterface
 {
     public interface IPlayListService
     {

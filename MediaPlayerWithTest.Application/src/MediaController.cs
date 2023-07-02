@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediaPlayer.src.Business.ServiceInterface;
 
-namespace MediaPlayerWithTest.Application.src
+namespace MediaPlayer.src.Application
 {
     public class MediaController
     {
