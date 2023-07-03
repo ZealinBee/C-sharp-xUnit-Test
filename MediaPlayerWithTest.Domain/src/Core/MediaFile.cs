@@ -6,8 +6,26 @@ namespace MediaPlayerWithTest.Domain.src.Core
         private bool _isPlaying;
         private TimeSpan _currentPosition;
         private Timer? _timer;
+        private string _fileName;
 
-        public string FileName { get; set; }
+        public string FileName
+        {
+            get
+            {
+                return _fileName;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("File name cannot be empty");
+                }
+                else
+                {
+                    _fileName = value;
+                }
+            }
+        }
         public string FilePath { get; set; }
         public TimeSpan Duration { get; set; }
         public double Speed
@@ -29,6 +47,14 @@ namespace MediaPlayerWithTest.Domain.src.Core
                 {
                     throw new ArgumentException("Not a valid speed value");
                 }
+            }
+        }
+
+        public bool IsPlaying
+        {
+            get
+            {
+                return _isPlaying;
             }
         }
 

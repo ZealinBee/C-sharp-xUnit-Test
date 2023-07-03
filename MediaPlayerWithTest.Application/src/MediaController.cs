@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using MediaPlayerWithTest.Business.src.ServiceInterface;
+using MediaPlayerWithTest.Domain.src.Core;
 
 namespace MediaPlayerWithTest.Application.src
 {
@@ -16,24 +17,30 @@ namespace MediaPlayerWithTest.Application.src
             _mediaService = mediaService;
         }
 
-        public void CreateNewFile(string fileName, string filePath, TimeSpan duration)
+        public MediaFile CreateNewFile(string fileName, string filePath, TimeSpan duration)
         {
-            _mediaService.CreateNewFile(fileName, filePath, duration);
+            return _mediaService.CreateNewFile(fileName, filePath, duration);
         }
 
-        public void DeleteFileById(int id)
+        public bool DeleteFileById(int id)
         {
+            var foundFile = _mediaService.GetFileById(id);
+            if (foundFile == null)
+            {
+                throw new Exception("ID not valid");
+            }
             _mediaService.DeleteFileById(id);
+            return true;
         }
 
-        public void GetAllFiles()
+        public IEnumerable<MediaFile> GetAllFiles()
         {
-            _mediaService.GetAllFiles();
+            return _mediaService.GetAllFiles();
         }
 
-        public void GetFileById(int id)
+        public MediaFile GetFileById(int id)
         {
-            _mediaService.GetFileById(id);
+            return _mediaService.GetFileById(id);
         }
     }
 }

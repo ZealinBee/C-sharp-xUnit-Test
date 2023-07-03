@@ -19,10 +19,6 @@ namespace MediaPlayerWithTest.Tests.Service.Tests
             _mediaService = new MediaService(_mediaRepositoryMock.Object);
         }
 
-        [Fact]
-        public void CreateNewFile_ValidData_CreateNewFile()
-        {
 
-        }
     }
 }
