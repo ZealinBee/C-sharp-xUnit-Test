@@ -1,24 +1,20 @@
 using Moq;
 using Xunit;
 
-using MediaPlayerWithTest.Domain.src.RepositoryInterface;
-using MediaPlayerWithTest.Business.src.ServiceInterface;
+using MediaPlayerWithTest.Domain.src.Core;
 using MediaPlayerWithTest.Business.src.Service;
+using MediaPlayerWithTest.Business.src.ServiceInterface;
 
-namespace MediaPlayerWithTest.Tests.Service.Tests
+
+namespace MediaPlayerWithTest.Tests.src.Service.Tests
 {
     public class MediaServiceTest
     {
-        private Mock<IMediaRepository> _mediaRepositoryMock;
-
-        private IMediaService _mediaService;
-
-        public MediaServiceTest()
+        [Fact]
+        public void CreateNewFile_ValidData_CreateNewFileInMediaService()
         {
-            _mediaRepositoryMock = new();
-            _mediaService = new MediaService(_mediaRepositoryMock.Object);
+            var mock = new Mock<IMediaService>();
+
         }
-
-
     }
 }

@@ -28,5 +28,16 @@ namespace MediaPlayerWithTest.Domain.src.Core
             else
                 throw new ArgumentNullException("Playlist is not found");
         }
+
+        public void RemoveAllLists()
+        {
+            _lists.Clear();
+        }
+
+        public List<PlayList> GetAllLists()
+        {
+            return _lists;
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 namespace MediaPlayerWithTest.Domain.src.Core
 {
-    public class PlayList
+    public class PlayList : BaseEntity
     {
         private readonly List<MediaFile> _files = new();
         private readonly int _userId;
@@ -13,10 +13,11 @@ namespace MediaPlayerWithTest.Domain.src.Core
             _userId = userId;
         }
 
-        public void AddNewFile(MediaFile file, int userId)
+        public MediaFile AddNewFile(MediaFile file, int userId)
         {
             if (CheckUserId(userId))
                 _files.Add(file);
+            return file;
         }
 
         public void RemoveFile(MediaFile file, int userId)

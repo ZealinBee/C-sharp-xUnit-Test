@@ -14,6 +14,14 @@ namespace MediaPlayerWithTest.Tests.src
             Assert.Equal(TimeSpan.FromSeconds(10), audio.Duration);
             Assert.Equal(1, audio.Speed);
         }
+        public void CreateNewVideo_ValidData_CreateNewVideo()
+        {
+            var video = new Video("file name", "file path", TimeSpan.FromSeconds(10), 1);
+            Assert.Equal("file name", video.FileName);
+            Assert.Equal("file path", video.FilePath);
+            Assert.Equal(TimeSpan.FromSeconds(10), video.Duration);
+            Assert.Equal(1, video.Speed);
+        }
 
         [Fact]
         public void CreateAudio_InvalidData_ThrowError()
@@ -28,6 +36,17 @@ namespace MediaPlayerWithTest.Tests.src
             audio.Play();
             Assert.True(audio.IsPlaying);
         }
+
+        [Fact]
+
+        public void StopAudio_StopAudio_StopAudio()
+        {
+            var audio = new Audio("file name", "file path", TimeSpan.FromSeconds(10), 1);
+            audio.Play();
+            audio.Stop();
+            Assert.False(audio.IsPlaying);
+        }
+
         [Fact]
         public void PauseAudio_Pause_PauseAudio()
         {
@@ -37,21 +56,25 @@ namespace MediaPlayerWithTest.Tests.src
             Assert.False(audio.IsPlaying);
         }
 
-        [Fact]
-        public void SetSpeedAudio_SetSpeed_SetSpeed()
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        public void SetSpeedAudio_SetSpeed_SetSpeed(double speed)
         {
             var audio = new Audio("file name", "file path", TimeSpan.FromSeconds(10), 1);
-            audio.Speed = 2;
-            Assert.Equal(2, audio.Speed);
+            audio.Speed = speed;
+            Assert.Equal(speed, audio.Speed);
         }
 
-        [Fact]
-        public void SetSpeedAudio_SetInvalidSpeed_ThrowError()
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        public void SetSpeedAudio_SetInvalidSpeed_ThrowError(double speed)
         {
             var audio = new Audio("file name", "file path", TimeSpan.FromSeconds(10), 1);
-            Assert.Throws<ArgumentException>(() => audio.Speed = 0);
+            Assert.Throws<ArgumentException>(() => audio.Speed = speed);
         }
-
 
 
     }
