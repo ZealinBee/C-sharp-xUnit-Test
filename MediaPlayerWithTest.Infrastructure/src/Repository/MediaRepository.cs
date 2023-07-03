@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MediaPlayer.src.Domain.RepositoryInterface;
+using MediaPlayerWithTest.Domain.src.RepositoryInterface;
 
-namespace MediaPlayer.src.Infrastructure.Repository
+namespace MediaPlayerWithTest.Infrastructure.src.Repository
 {
     public class MediaRepository : IMediaRepository
     {

@@ -1,6 +1,6 @@
-using MediaPlayer.src.Business.ServiceInterface;
+using MediaPlayerWithTest.Business.src.ServiceInterface;
 
-namespace MediaPlayer.src.Application
+namespace MediaPlayerWithTest.Application.src
 {
     public class PlayListController
     {

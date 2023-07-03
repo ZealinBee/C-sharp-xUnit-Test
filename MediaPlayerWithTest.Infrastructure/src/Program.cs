@@ -1,7 +1,7 @@
-﻿using MediaPlayer.src.Application;
-using MediaPlayer.src.Business.Sevice;
-using MediaPlayer.src.Domain.Core;
-using MediaPlayer.src.Infrastructure.Repository;
+﻿using MediaPlayerWithTest.Application.src;
+using MediaPlayerWithTest.Business.src.Service;
+using MediaPlayerWithTest.Domain.src.Core;
+using MediaPlayerWithTest.Infrastructure.src.Repository;
 
 internal class Program
 {
@@ -12,7 +12,7 @@ internal class Program
         var userRepository = new UserRepository();
         var userService = new UserService(userRepository);
         var userController = new UserController(userService);
-   
+
         var mediaRepository = new MediaRepository();
         var mediaService = new MediaService(mediaRepository);
         var mediaController = new MediaController(mediaService);

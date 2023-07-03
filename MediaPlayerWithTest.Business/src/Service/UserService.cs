@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MediaPlayer.src.Business.ServiceInterface;
-using MediaPlayer.src.Domain.RepositoryInterface;
 
-namespace MediaPlayer.src.Business.Sevice
+using MediaPlayerWithTest.Business.src.ServiceInterface;
+using MediaPlayerWithTest.Domain.src.RepositoryInterface;
+
+namespace MediaPlayerWithTest.Business.src.Service
 {
     public class UserService : IUserService
     {

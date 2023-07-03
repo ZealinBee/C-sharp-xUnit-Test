@@ -1,4 +1,4 @@
-namespace MediaPlayer.src.Domain.Core
+namespace MediaPlayerWithTest.Domain.src.Core
 {
     public class User : BaseEntity
     {
@@ -7,7 +7,7 @@ namespace MediaPlayer.src.Domain.Core
 
         public string Name { get; set; } = string.Empty;
 
-        private User(){}
+        private User() { }
 
         public static User Instance => lazyInstance.Value;
 

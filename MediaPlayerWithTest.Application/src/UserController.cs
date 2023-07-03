@@ -1,6 +1,6 @@
-using MediaPlayer.src.Business.ServiceInterface;
+using MediaPlayerWithTest.Business.src.ServiceInterface;
 
-namespace MediaPlayer.src.Application
+namespace MediaPlayerWithTest.Application.src
 {
     public class UserController
     {
@@ -38,7 +38,7 @@ namespace MediaPlayer.src.Application
 
         public void RemoveOneList(int listId, int userId)
         {
-           _userService.RemoveOneList(listId, userId);
+            _userService.RemoveOneList(listId, userId);
         }
     }
 }

@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MediaPlayer.src.Domain.Core;
 
-namespace MediaPlayer.src.Domain.RepositoryInterface
+namespace MediaPlayerWithTest.Domain.src.RepositoryInterface
 {
     public interface IMediaRepository
     {
